@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,49 +8,33 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
- 
-
-
-     <div style="text-align: right;" class="background">
-    </div>
+    <div style="text-align: right;" class="background"></div>
     <div>
         <div class="ang">
-            <img style="width: 18%; height: 9%; float: left;" src="file:///C:/Users/ANGELICA/Desktop/sti/Picsart_24-08-21_20-18-51-530.png" alt="">
-      <div class="text">
-       
-        <h1 style="font-family: Roboto Light; font-size: 25; text-align: center;">STI COLLEGE GLOBAL CITY<br>GUIDANCE COUNSELING</h1>
-        <p style="font-family: Lato Bold; font-size: 15; text-align: center;">Welcome back! Please login to your account.</p>
-      </div>
-    </div>
-   
-            <form action="">
-                <div class="wrapper">
-                <div class="input-box">
-                    <input type="text" placeholder="Username"
-                     required>
-                     <i class='bx bxs-user'></i>
-                </div>
-            </form>
-            <div class="input-box">
-                <input type="password" placeholder="Password"
-                required>
-                <i class='bx bxs-lock-alt'></i>
+            <img style="width: 18%; height: 9%; float: left;" src="/sti/Picsart_24-08-21_20-18-51-530.png" alt="">
+            <div class="text">
+                <h1 style="font-family: Roboto Light; font-size: 25; text-align: center;">STI COLLEGE GLOBAL CITY<br>GUIDANCE COUNSELING</h1>
+                <p style="font-family: Lato Bold; font-size: 15; text-align: center;">Welcome back! Please login to your account.</p>
             </div>
-            <div class="remeber-forgot">
-                <label style="color: black ;"><input type="checkbox">Remember me</label>
-             
-            </div>
-           <a href="counsilhome.html"><button type="button" class="btn">Login</button></a>
         </div>
 
-
-
-
- 
-
-
-
-
-   
+        <form action="menu.html" method="GET">
+            <div class="wrapper">
+                <div class="input-box">
+                    <input type="text" name="user" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="pass" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="remember-forgot">
+                    <label style="color: black ;"><input type="checkbox">Remember me</label>
+                    <a href="counsilogin.html"><button type="button">Counselor?</button></a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

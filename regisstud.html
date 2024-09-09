@@ -1,0 +1,142 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking Form</title>
+    <link rel="stylesheet" href="res.css">>
+    <style>
+  body {
+    background: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+  font-family: Arial, sans-serif;
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 50px auto;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+
+.logo img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.input-field {
+  margin-bottom: 15px;
+}
+
+
+input[type="text"] {
+  width: 95%;
+  padding: 10px;
+ background-color: #ffce00;
+  border-radius: 20px;
+}
+
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #05519b;
+}
+
+
+.button {
+  background-color: #05519b;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.button:hover {
+  background-color: #05519b;
+}
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("file:///C:/Users/ANGELICA/Desktop/sti/342534537_764888115252627_8492425223784841347_n.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+}
+
+
+    </style>
+</head>
+<body>
+    <label class="nav-2">
+        <input class="nav-1" type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+       
+        </div>
+   
+        <div class="slide">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="tick.html"><i class="GC"></i> Guidance Counselor </a></li>
+                <li><a href="regisstud.html"><i class="OA"></i> Online Appointment </a></li>
+                <li><a href="studacc.html"><i class="MA"></i> My Account </a></li>
+                </ul>
+   
+        </div>
+        </label>
+
+
+    <br>
+
+
+    <br>
+ 
+    <div class="card">
+        <div class="logo">
+        <img src="file:///C:/Users/ANGELICA/Desktop/sti/Picsart_24-08-21_20-18-51-530.png" alt="Logo">
+        </div>
+        <h2 style="text-align: center;">BOOK AN APPOINTMENT</h2>
+        <div class="input-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div class="input-field">
+          <label for="section">Section</label>
+          <input type="text" id="section" placeholder="Enter your section">
+        </div>
+        <div class="input-field">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="Enter your phone number">
+        </div>
+        <button class="button" id="requestCounseling">Book Appointment</button>
+      </div>
+     
+   <div class="bg"></div>
+    <!-- Firebase v8 SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="index.js">
+    </script>
+        </body>
+</html>

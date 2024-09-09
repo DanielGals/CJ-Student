@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+:root{
+
+
+    --color-1: #0f1016;
+    --text-color:#f0f0f0;
+    --accent-color:#006aff
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html{
+    font-size: 12pt;
+    font-family: Garamond;
+}
+
+
+nav{
+    height: 60px;
+    background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+nav a{
+    font-size: 10pxs;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+
+
+}
+
+
+nav a:hover{
+    background-color: var(--accent-color);
+}
+
+
+nav .home-link{
+    margin-right: auto;
+}
+
+
+nav svg{
+    fill: var(--text-color);
+}
+
+
+#sidebar-active{
+    display: none;
+}
+
+
+.open-sidebar-button, .close-sidebar-button{
+    padding: 0 20px;
+    display: none;
+}
+
+
+@media(max-width: 550px){
+    .links-container{
+       
+        flex-direction: column;
+        align-items: flex-start;
+
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+
+
+        background-color: var(--color-1);
+        box-shadow: -5px 0 5px rgba(0,0,0,0.25);
+        transition: 0.75s ease-out;
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+
+
+    .open-sidebar-button, .close-sidebar-button{
+        padding:  20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container{
+        right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{
+        background: purple;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
+
+
+:root{
+    --c-theme-primary:#008FFD;
+    --c-theme-primary-accent:#CBE8FF;
+    --c-bg-primary:#D6DAE0;
+    --c-bg-secondary:#EAEBEC;
+    --c-bg-tertiary:#FDFDFD;
+    --c-text-primary:#1F1F25;
+    --c-text-secondary:#999FA6;
+}
+
+
+.calendar{
+   
+    font-family: Garamond;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-text-primary);
+    margin-left: 20px;
+   
+}
+
+
+button{
+    font: inherit;
+    cursor: pointer;
+}
+
+
+button:focus{
+    outline:0 ;
+}
+
+
+.datepicker{
+    width: 95%;
+    max-width: 350px;
+    background-color: var(--c-bg-tertiary);
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2) 0, 5px, 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+
+.datepicker-top{
+    margin-bottom: 1rem;
+}
+
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+}
+
+
+.tag{
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    border: 0;
+    background-color: var(--c-bg-secondary);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+}
+
+
+.month-selector{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: #fff;
+    border-radius: 12px;
+    width: 2.5rem;
+    height: 2.5rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25) 0 0 10px 0 rgba(0, 0, 0, 0.15);
+
+
+}
+
+
+.month-name{
+    font-weight: 600;
+}
+
+
+.datepicker-calendar{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-row-gap: 1rem;
+}
+
+
+.day, date{
+justify-self: center;
+}
+
+
+.day{
+    color: var(--c-text-secondary);
+    font-size: 0.875em;
+    font-weight: 500;
+    justify-self: center;
+}
+
+
+.date{
+    border: 0;
+    padding: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+.date:focus{
+    outline: 0;
+    color: var(--c-theme-primary);
+    border: 2px solid var(--c-theme-primary-accent);
+}
+.faded{
+    color: var(--c-text-secondary);
+}
+
+
+.current-day{
+    color: #fff;
+    border-color: var(--c-theme-primary);
+    background-color: 2px solid var(--c-theme-primary);
+}
+
+
+.current-day:focus{
+    background-color: var(--c-theme-primary-accent);
+}
+
+
+.align{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}

@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond;
+}
+body{
+    display: flex;
+    align-items: center;
+   
+     
+
+
+}
+
+
+
+
+
+
+.background{
+    background-image: url("/sti/342534537_764888115252627_8492425223784841347_n.jpg");
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 0px;
+    width: 70%;
+    height: 100%;
+    background-size: cover;
+   
+   
+   
+
+
+}
+
+
+
+
+.dot{
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 600px;
+}
+.wrapper{
+    width: 400px;
+    background: transparent;
+    color: #fff;
+    padding: 0px;
+   
+   
+
+
+}
+.wrapper h1{
+    font-size:36px;
+    text-align: center;
+
+
+}
+.input-box{
+    border-bottom: 1px solid black;
+}
+
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+   
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    padding: 20px 45px 20px 20px;
+}
+
+
+.input-box input::placeholder{
+   color: black;;
+}
+
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+
+.wrapper .remeber-forgot{
+   display: flex;
+   justify-content: space-between;
+   font-size: 14.5px;
+   margin: -15px 0 15px;
+}
+
+
+.remeber-forgot label input{
+    accent-color: black;;
+    margin-right: 3px;
+}
+
+
+.remeber-forgot a{
+    color: black;;
+    text-decoration: none;
+
+
+}
+
+
+.remeber-forgot a:hover{
+    text-decoration: underline;
+}
+a .button{
+    color: transparent;
+}
+
+
+.wrapper .btn{
+
+
+        background-color: #0283FF;
+        color: white;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+     
+        cursor: pointer;
+   
+}
+
+
+
+
+.navbar-transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+ 
+  .navbar-transparent .navbar-brand {
+    color: #fff;
+  }
+ 
+  .navbar-transparent .nav-link {
+    color: #fff;
+  }
+ 
+  .navbar-transparent .nav-link:hover {
+    color: #ccc;
+  }
+ 
+  .navbar-transparent .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+ 
+  .navbar-transparent .navbar-nav > li > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+
+  .navbar-transparent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
