@@ -1,0 +1,342 @@
+:root {
+    --primary-clr: rgb(124, 178, 223);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 48, 83);
+}
+
+
+.container {
+    position: relative;
+    width: 1200px;
+    min-height: 850px;
+    margin: 0 auto;
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(83, 102, 209);
+}
+
+
+.left {
+    width: 90%;
+    padding: 20px;
+}
+
+.appointment {
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.calendar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color:rgb(42, 63, 133);
+    border-radius: 5px;
+    background-color: rgb(209, 211, 212);
+}
+
+
+.calendar::before,
+.calendar::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 12px;
+    height: 97%;
+    border-radius: 0 5px 5px 0;
+    background-color: rgb(160, 159, 159);
+    transform: translateY(-50%);
+}
+
+
+.calendar::before {
+    height: 94%;
+    left: calc(100% + 12px);
+    background-color: rgb(117, 117, 117);
+}
+
+
+.calendar .month {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.calendar .month .prev,
+.calendar .month .next {
+    cursor: pointer;
+}
+.calendar .month .prev:hover,
+.calendar .month .next:hover {
+    color: var(--primary-clr);
+}
+
+
+.calendar .weekdays {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+.calendar .weekdays div {
+    width: 14.28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.calendar .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.calendar .days .day {
+    width: 14.28%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #4e80ca;
+}
+
+
+.calendar .day:not(.prev-date, .next-date):hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .days .prev-date,
+.calendar .days .next-date {
+    color: #b3b3b3;
+}
+.calendar .days .active {
+    position: relative;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .days .today .active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 2px var(--primary-clr);
+}
+.calendar .days .today {
+    font-size: 2rem;
+}
+.calendar .days .event {
+    position: relative;
+}
+.calendar .days .event::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    height: 6px;
+    border-radius: 30x;
+    transform:  translateX(-50%);
+    background-color: var(--primary-clr);
+}
+.calendar .event:hover::after {
+    background-color: #fff;
+}
+.calendar .active::after {
+    background-color: #fff;
+    bottom: 20%;
+}
+.calendar .active.event {
+    padding-bottom: 10px;
+}
+.calendar .goto-today {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    color: var(--primary-clr);
+}
+.calendar .goto-today .goto {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--primary-clr);
+}
+.calendar .goto-today .goto input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    color: var(--primary-clr);
+    border-radius: 5px;
+}
+.calendar .goto-today button {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    color: var(--primary-clr);
+}
+.calendar .goto-today button:hover {
+    color: #fff;
+    background-color: var(--primary-clr);
+}
+.calendar .goto-today.goto button {
+    border: none;
+    border-left: 1px solid var(--primary-clr);
+    border-radius: 0;
+}
+/* CSS for notifications */
+/* CSS for notifications container */
+#notifications-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
+    gap: 10px; /* Space between boxes */
+    padding: 20px; /* Add padding around the container */
+    width: 100%; /* Full width of the container */
+    overflow-x: auto; /* Horizontal scrolling if needed */
+}
+
+/* CSS for weekdays labels */
+.calendar .weekdays {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute space between day labels */
+    width: 100%; /* Full width of the container */
+}
+
+/* CSS for individual weekday labels */
+.calendar .weekdays div {
+    width: 14%; /* Ensure each day gets enough space */
+    text-align: center; /* Center text horizontally */
+    font-weight: bold;
+    padding: 10px; /* Add padding for better spacing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* CSS for individual day boxes */
+.calendar .days .day {
+    width: calc(14% - 10px); /* Adjust width based on gaps between boxes */
+    height: 90px; /* Set a fixed height for day boxes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--primary-clr);
+    border: 1px solid #4e80ca;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    padding: 10px; /* Add padding inside the day box */
+    margin-right: 10px; /* Add margin to the right of each day box */
+    margin-bottom: 10px; /* Add margin to the bottom of each day box */
+}
+
+/* Optional: Ensure day boxes fit nicely in rows */
+.calendar .days {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
+    gap: 10px; /* Space between boxes */
+    padding: 20px; /* Add padding around the container */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+
+/* CSS for notifications container */
+#notifications-container {
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
+    gap: 10px; /* Space between boxes */
+    padding: 20px; /* Add padding around the container */
+    width: 100%; /* Full width of the container */
+    overflow-x: auto; /* Horizontal scrolling if needed */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* CSS for individual notification boxes */
+.notification {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px); /* Adjust width based on the number of boxes per row and gap */
+    min-width: 200px; /* Ensure it doesn't shrink below this width */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Title style within notification */
+.notification .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Details style within notification */
+.notification .details {
+    margin-bottom: 5px;
+}
+
+/* Day style within notification */
+.notification .day {
+    color: #888;
+}
+

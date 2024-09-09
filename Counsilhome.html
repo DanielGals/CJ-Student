@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="counhome.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body{
+            background-color: #0283FF;
+            font-family: Garamond;
+            background-repeat: no-repeat;
+            background-position: center;
+           
+
+
+        }
+       
+        .up p{
+           
+            background: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)
+        }
+
+
+        .back{
+          margin-top: 30px;
+          margin-left: 30px;
+         
+        }  
+
+
+
+
+   
+
+
+.card {
+  background-color: #F9D549;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 300px;
+}
+
+
+.person {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+
+.name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+.title {
+  font-size: 14px;
+}
+
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 10px 0;
+}
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("file:///C:/Users/ANGELICA/Desktop/sti/342534537_764888115252627_8492425223784841347_n.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+
+
+
+
+}
+
+
+.logo{
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 55px;
+}
+
+
+       /* CSS class for notification alert */
+.notification-alert {
+    color: red; /* Change this to the desired color */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+    </style>
+</head>
+<body>
+
+
+
+
+
+
+    <img src="file:///C:/Users/ANGELICA/Desktop/sti/Picsart_24-08-21_20-18-51-530.png" class="logo
+    ">
+    <nav>
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+        </label>
+ 
+       <label id="overlay" for="sidebar-active"></label>
+        <div class="links-container">
+         <label for="sidebar-active" class="close-sidebar-button">
+             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+         </label>
+ 
+         <a style="font-size: 20px;" class="home-link" href="#"></a>
+         <a href="notif.html"><i id="notification-bell" class="fa-solid fa-bell"></i></a>
+         <a href="notif.html"><i class="fa-regular fa-calendar"></i></a>
+         <a style="font-size: 20px;" href="counselmenu.html">Menu</a>
+         <a style="font-size: 20px;" href="sched.html">Students</a>
+         <a style="font-size: 20px;" href="counseloracc.html">My Account</a>
+         
+        </div>
+     </nav>
+   <div class="up">
+
+
+ <p>Home <br>Counselors</p>
+ 
+   
+   </div>
+
+
+
+
+   <div class="align">
+   <div class="back">
+    <img style="border-radius: 5%; float: left;" src="file:///C:/Users/ANGELICA/Desktop/sti/stiefa.jpg" alt="">
+   </div>
+
+
+
+
+<br>
+   
+<div class="calendar">
+   <div class="datepicker">
+    <div class="datepicker-top">
+        <div class="btn-group">
+            <button class="tag">Today</button>
+            <button class="tag">Tomorrow</button>
+            <button class="tag">In 2 Days</button>
+        </div>
+        <div class="month-selector">
+          <button class="arrow"><i class="material-symbols-outlined">chevron_left</i></button>
+          <span class="month-name">MAY 2024</span>
+          <button class="arrow"><i class="material-symbols-outlined">chevron_right</i></button>
+        </div>
+    </div>
+    <div class="datepicker-calendar">
+        <span class="day">Mo</span>
+        <span class="day">Tu</span>
+        <span class="day">We</span>
+        <span class="day">Th</span>
+        <span class="day">Fri</span>
+        <span class="day">Sat</span>
+        <span class="day">Sun</span>
+        <button class="date faded">30</button>
+        <button class="date">1</button>
+        <button class="date">2</button>
+        <button class="date">3</button>
+        <button class="date">4</button>
+        <button class="date">5</button>
+        <button class="date">6</button>
+        <button class="date ">7</button>
+        <button class="date">8</button>
+        <button class="date">9</button>
+        <button class="date">10</button>
+        <button class="date">11</button>
+        <button class="date">12</button>
+        <button class="date">13</button>
+        <button class="date">14</button>
+        <button class="date">15</button>
+        <button class="date">16</button>
+        <button class="date">17</button>
+        <button class="date">18</button>
+        <button class="date">19</button>
+        <button class="date">20</button>
+        <button class="date">21</button>
+        <button class="date">22</button>
+        <button class="date">23</button>
+        <button class="date">24</button>
+        <button class="date">25</button>
+        <button class="date">26</button>
+        <button class="date">27</button>
+        <button class="date current-day">28</button>
+        <button class="date">29</button>
+        <button class="date">28</button>
+        <button class="date">30</button>
+        <button class="date">31</button>
+        <button class="date faded">1</button>
+        <button class="date faded">2</button>
+        <button class="date faded">3</button>
+
+
+    </div>
+   </div>
+</div>
+
+
+   
+<br>
+
+
+<div class="card">
+  <h1 style="text-align:center ;">Scheduled</h1>
+  <div class="person"><i class="fa-solid fa-user"></i></div>
+  <div class="name">NAME OF STUDENT</div>
+  <div class="title">DATE/TIME</div>
+  <div class="divider"></div>
+  <div class="person"><i class="fa-solid fa-user"></i></div>
+  <div class="name">NAME OF STUDENT</div>
+  <div class="title">DATE/TIME</div>
+</div>
+
+
+
+
+  <div class="bg"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+     <script src="Counsilhome.js"></script>
+</body>
+</html>

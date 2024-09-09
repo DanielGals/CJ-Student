@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #F9D549;
+ }
+ .slide{
+    height: 100%;
+    width:  180px;
+    position: absolute;
+    background-color: #05519b;
+    transition: 0.5s ease;
+    transform: translateX(-180px);
+    border: 20px;
+ }
+ h1{
+    color: #000;
+    text-align: right;
+    font-weight: 800;
+    padding: 10px 0;
+    padding-right: 30px;
+    pointer-events: none;
+ }
+ ul li{
+    list-style: none;
+ }
+ ul li a{
+    color: #011a41;
+    font-weight: 500;
+    padding: 5px 0;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+ }
+ ul li:hover a{
+    color: #ffce00;
+    background-color: #05519b;
+ }
+ ul li a i{
+    width: 40px;
+    text-align: center;
+ }
+ input{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+ }
+.toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 20px;
+    Left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #ffce00;
+
+
+}
+.toggle .common{
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background-color: #05519b;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+input:checked ~ .toggle .top_line{
+    Left: 2px;
+    top: 14px;
+    width: 25;
+    transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line{
+    Left: 2px;
+    top: 14px;
+    width: 25;
+    transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line{
+    opacity: 0;
+    transform: translateX(20px);
+}
+input:checked ~ .slide{
+    transform: translateX(0);
+    box-shadow: 0 0 15px #000;
+}
+
+
+
+
+
+
+
+
+.button {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background: linear-gradient(to top, #fffac2 0%, #fff25c 100%);
+  border-radius: 50px;
+}
+
+
+.button:hover {
+  background-color: #ddd;
+}
+
+
+.btn{
+    margin-top: 100px;
+}
+
+
+nav{
+    height: 60px;
+    background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.logo{
+  position: absolute;
+  height: auto;
+  left: 0px;
+  width: 55px;
+}
+
+
+.container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 600px;
+}
+
+
+.list-item {
+  background-color: #dcdcdc ;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+.list-item h3 {
+  margin: 0;
+}
+
+
+.p{
+    font-size: 30px;
+    background: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%)
+}
+
+
+.bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("file:///C:/Users/ANGELICA/Desktop/sti/342534537_764888115252627_8492425223784841347_n.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(4px);
+}
+</style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+       
+        </div>
+   
+        <div class="slide">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="notif.html"><i class="GC"></i>Calendar</a></li>
+                <li><a href="sched.html"><i class="OA"></i>Scheduled Appointments </a></li>
+                <li><a href="counseloracc.html"><i class="MA"></i> My Account </a></li>
+                </ul>
+   
+        </div>
+        </label>
+
+
+
+
+        <nav>
+          <ul>
+            <li>
+                <img style="float: right;   position: relative;
+                top: -6px;
+                right: -706px;" src="file:///C:/Users/ANGELICA/Desktop/sti/Picsart_24-08-21_20-18-51-530.png" class="logo">
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="p">
+            <p>SCHEDULED APPOINTMENTS</p>
+        </div>
+<br>
+
+
+<div class="container">
+    <div class="list-item">
+      <h3>Name/Date/Time</h3>
+    </div>
+    <div class="list-item">
+      <h3>Name/Date/Time</h3>
+    </div>
+    <div class="list-item">
+      <h3>Name/Date/Time</h3>
+    </div>
+    <div class="list-item">
+      <h3>Name/Date/Time</h3>
+    </div>
+    <div class="list-item">
+      <h3>Name/Date/Time</h3>
+    </div>
+  </div>
+ 
+<div class="bg"></div>
+</body>
+</html>
+
+
